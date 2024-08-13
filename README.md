@@ -36,7 +36,7 @@
   * **PUT**
 
     ```
-    http://localhost:8080/farmacies/2
+    http://localhost:8080/farmacies/4
     ```
 
     Body de la solicitud:
