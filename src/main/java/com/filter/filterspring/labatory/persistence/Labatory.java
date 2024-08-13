@@ -28,10 +28,10 @@ public class Labatory {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(length = 50)
+    @Column(length = 50, nullable = false)
     private String namelab;
 
     @ManyToOne
-    @JoinColumn(name = "codecity")
+    @JoinColumn(name = "codecity", nullable = false)
     City codecityreg;
 }

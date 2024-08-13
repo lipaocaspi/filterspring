@@ -24,6 +24,6 @@ public class ActivePrinciple {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idap;
 
-    @Column(length = 60)
+    @Column(length = 60, nullable = false)
     private String nameap;
 }

@@ -25,28 +25,28 @@ import lombok.Setter;
 @Table(name = "customer")
 public class Customer {
     @Id
-    @Column(length = 20)
+    @Column(length = 20, nullable = false)
     private String idcustomer;
 
-    @Column(length = 50)
+    @Column(length = 50, nullable = false)
     private String namecustomer;
 
-    @Column(length = 50)
+    @Column(length = 50, nullable = false)
     private String lastnamecustomer;
 
     @ManyToOne
-    @JoinColumn(name = "codecity")
+    @JoinColumn(name = "codecity", nullable = false)
     City codecitycustomer;
 
-    @Column(length = 100)
+    @Column(length = 100, nullable = false)
     private String emailcustomer;
 
-    @Column
+    @Column(nullable = false)
     private LocalDate birthdate;
 
-    @Column
+    @Column(nullable = false)
     private Long lon;
 
-    @Column
+    @Column(nullable = false)
     private Long latitud;
 }

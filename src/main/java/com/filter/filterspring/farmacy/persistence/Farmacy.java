@@ -28,22 +28,22 @@ public class Farmacy {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idfarmacy;
 
-    @Column(length = 60)
+    @Column(length = 60, nullable = false)
     private String namefarmacy;
 
-    @Column(length = 100)
+    @Column(length = 100, nullable = false)
     private String addressfarmacy;
 
-    @Column
+    @Column(nullable = false)
     private Long long1;
 
-    @Column
+    @Column(nullable = false)
     private Long latfarmacy;
 
     @ManyToOne
-    @JoinColumn(name = "codecity")
+    @JoinColumn(name = "codecity", nullable = false)
     private City codecityfarm;
 
-    @Column(length = 50)
+    @Column(length = 50, nullable = false)
     private String logofarmacy;
 }

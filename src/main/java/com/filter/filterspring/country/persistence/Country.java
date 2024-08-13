@@ -19,9 +19,9 @@ import lombok.Setter;
 @Table(name = "country")
 public class Country {
     @Id
-    @Column(length = 5)
+    @Column(length = 5, nullable = false)
     private String codecountry;
 
-    @Column(length = 50)
+    @Column(length = 50, nullable = false)
     private String namecountry;
 }

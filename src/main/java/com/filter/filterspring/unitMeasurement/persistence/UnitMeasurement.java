@@ -24,6 +24,6 @@ public class UnitMeasurement {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idum;
 
-    @Column(length = 50)
+    @Column(length = 50, nullable = false)
     private String nameum;
 }

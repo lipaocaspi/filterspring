@@ -24,6 +24,6 @@ public class ModeAdministration {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(length = 60)
+    @Column(length = 60, nullable = false)
     private String descriptionmode;
 }

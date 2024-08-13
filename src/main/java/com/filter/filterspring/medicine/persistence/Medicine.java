@@ -31,37 +31,37 @@ public class Medicine {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idmedicine;
 
-    @Column(length = 10)
+    @Column(length = 10, nullable = false)
     private String proceedings;
 
-    @Column(length = 100)
+    @Column(length = 100, nullable = false)
     private String namemedicine;
 
-    @Column(length = 50)
+    @Column(length = 50, nullable = false)
     private String healthregister;
 
-    @Column
+    @Column(nullable = false)
     private String description;
 
-    @Column(length = 60)
+    @Column(length = 60, nullable = false)
     private String descriptionshort;
 
     @ManyToOne
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "id", nullable = false)
     ModeAdministration codemodeadmin;
 
     @ManyToOne
-    @JoinColumn(name = "codeap")
+    @JoinColumn(name = "codeap", nullable = false)
     ActivePrinciple codeap;
 
     @ManyToOne
-    @JoinColumn(name = "idum")
+    @JoinColumn(name = "idum", nullable = false)
     UnitMeasurement codeum;
 
-    @Column(length = 100)
+    @Column(length = 100, nullable = false)
     private String namerol;
 
     @ManyToOne
-    @JoinColumn(name = "codelab")
+    @JoinColumn(name = "codelab", nullable = false)
     Labatory codelab;
 }

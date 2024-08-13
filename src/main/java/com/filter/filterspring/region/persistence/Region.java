@@ -23,13 +23,13 @@ import lombok.Setter;
 @Table(name = "region")
 public class Region {
     @Id
-    @Column(length = 5)
+    @Column(length = 5, nullable = false)
     private String codereg;
 
-    @Column(length = 50)
+    @Column(length = 50, nullable = false)
     private String namereg;
 
     @ManyToOne
-    @JoinColumn(name = "codecountry")
+    @JoinColumn(name = "codecountry", nullable = false)
     Country codecountry;
 }
